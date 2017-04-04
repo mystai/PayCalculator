@@ -219,7 +219,12 @@ public class PayCalculator {
 		button.setBounds(202, 234, 190, 23);
 		frame.getContentPane().add(button);
 
-		
+		errorLbl = new JLabel("Не все данные введены или введены правильно!");
+		errorLbl.setForeground(Color.RED);
+		errorLbl.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		errorLbl.setBounds(28, 0, 347, 19);
+		errorLbl.setVisible(false);
+		frame.getContentPane().add(errorLbl);
 
 		detiBox = new JCheckBox("");
 		detiBox.addMouseListener(new MouseAdapter() {
