@@ -248,7 +248,20 @@ public class PayCalculator {
 		frame.getContentPane().add(detiBox);
 
 		premiyaBox = new JCheckBox("");
-	
+		premiyaBox.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if (premiyaField.isVisible() == false)
+					premiyaField.setVisible(true);
+				else
+					premiyaField.setVisible(false);
+
+				if (premiyaField.isVisible() == false)
+					premiyaBox.setSelected(false);
+				else
+					premiyaBox.setSelected(true);
+			}
+		});
 		premiyaBox.setBounds(139, 172, 21, 19);
 		frame.getContentPane().add(premiyaBox);
 
